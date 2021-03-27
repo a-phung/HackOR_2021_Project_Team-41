@@ -10,6 +10,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use(express.static('public'));
+// app.use('/about-vaccine', require('./about-vaccine.js'));
+app.use('/local-info', require('./local-info.js'));
+
 
 app.set('port', 30000);
 
@@ -34,7 +37,7 @@ app.use(function(err, req, res, next){
 });
 
   
-app.listen(app.get('port'), function(){
+app.listen(process.env.PORT || app.get('port'), function(){
     console.log(`Express started on http://localhost:${app.get('port')}; press Ctrl-C to terminate`);
 });
 

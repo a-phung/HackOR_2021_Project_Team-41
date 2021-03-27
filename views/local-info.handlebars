@@ -1,0 +1,34 @@
+<div>
+    <h1>Covid Information</h1>
+</div>
+<div>
+    <form>
+        <label for="county_name">Enter Your County:</label><br>
+        <input type="text" id="countyName" size="30" maxlength="100" >
+        <select id="stateName"  maxlength="100">
+            <option>Select State</option>
+        </select>
+        <input id="submitCounty" value="Submit" onclick="getCountyInfo()">
+    </form>
+</div>
+
+<div>
+<p>Total Vaccine Distributed</p>
+
+    {{#each CountryVaccines}}
+
+        {{#if total_vaccinations.length}}
+            <p>{{date}} : {{total_vaccinations}}</p>
+        {{/if}}
+    {{/each}}
+
+    
+    {{#each StateVaccines}}
+        {{#if total_distributed.length}}
+        <p>{{date}} : {{total_distributed}}</p>
+        {{/if}}
+    {{/each}}
+</div>
+
+
+    <script src="/scripts/local_info_scripts.js"></script>

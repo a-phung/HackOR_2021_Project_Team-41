@@ -1,0 +1,202 @@
+[
+	{
+		"STATE" : "Alabama",
+		"LINK" : "https://www.alabamapublichealth.gov/covid19vaccine/#:~:text=Who's%20Eligible%3F"
+	},
+	{
+		"STATE" : "Alaska",
+		"LINK" : "http://dhss.alaska.gov/dph/epi/id/pages/COVID-19/vaccine.aspx"
+	},
+	{
+		"STATE" : "Arizona",
+		"LINK" : "https://www.azdhs.gov/documents/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/novel-coronavirus/vaccine-phases.pdf"
+	},
+	{
+		"STATE" : "Arkansas",
+		"LINK" : "https://www.healthy.arkansas.gov/programs-services/topics/covid-19-vaccination-plan"
+	},
+	{
+		"STATE" : "California",
+		"LINK" : "https://covid19.ca.gov/vaccines/"
+	},
+	{
+		"STATE" : "Colorado",
+		"LINK" : "https://covid19.colorado.gov/for-coloradans/vaccine/vaccine-for-coloradans"
+	},
+	{
+		"STATE" : "Connecticut",
+		"LINK" : "https://portal.ct.gov/Vaccine-Portal"
+	},
+	{
+		"STATE" : "Delaware",
+		"LINK" : "https://coronavirus.delaware.gov/vaccine/"
+	},
+	{
+		"STATE" : "Florida",
+		"LINK" : "https://floridahealthcovid19.gov/vaccines/"
+	},
+	{
+		"STATE" : "Georgia",
+		"LINK" : "https://dph.georgia.gov/covid-vaccine"
+	},
+	{
+		"STATE" : "Hawaii",
+		"LINK" : "https://hawaiicovid19.com/vaccine/"
+	},
+	{
+		"STATE" : "Idaho",
+		"LINK" : "https://healthandwelfare.idaho.gov/covid-19-vaccination"
+	},
+	{
+		"STATE" : "Illinois",
+		"LINK" : "https://www.dph.illinois.gov/covid19/vaccine-faq"
+	},
+	{
+		"STATE" : "Indiana",
+		"LINK" : "https://www.coronavirus.in.gov/vaccine/"
+	},
+	{
+		"STATE" : "Iowa",
+		"LINK" : "https://coronavirus.iowa.gov/pages/vaccineinformation"
+	},
+	{
+		"STATE" : "Kansas",
+		"LINK" : "https://www.kansasvaccine.gov/"
+	},
+	{
+		"STATE" : "Kentucky",
+		"LINK" : "https://govstatus.egov.com/ky-covid-vaccine"
+	},
+	{
+		"STATE" : "Louisiana",
+		"LINK" : "https://ldh.la.gov/covidvaccine/"
+	},
+	{
+		"STATE" : "Maine",
+		"LINK" : "https://www.maine.gov/covid19/vaccines"
+	},
+	{
+		"STATE" : "Maryland",
+		"LINK" : "https://coronavirus.maryland.gov/pages/vaccine"
+	},
+	{
+		"STATE" : "Massachusetts",
+		"LINK" : "https://www.mass.gov/covid-19-vaccine"
+	},
+	{
+		"STATE" : "Michigan",
+		"LINK" : "https://www.michigan.gov/coronavirus/0,9753,7-406-98178_103214---,00.html"
+	},
+	{
+		"STATE" : "Minnesota",
+		"LINK" : "https://mn.gov/covid19/vaccine/index.jsp"
+	},
+	{
+		"STATE" : "Mississippi",
+		"LINK" : "https://msdh.ms.gov/msdhsite/_static/14,0,420,976.html"
+	},
+	{
+		"STATE" : "Missouri",
+		"LINK" : "https://covidvaccine.mo.gov/"
+	},
+	{
+		"STATE" : "Montana",
+		"LINK" : "https://dphhs.mt.gov/covid19vaccine"
+	},
+	{
+		"STATE" : "Nebraska",
+		"LINK" : "https://dhhs.ne.gov/Pages/COVID-19-Vaccine-Information.aspx"
+	},
+	{
+		"STATE" : "Nevada",
+		"LINK" : "https://nvhealthresponse.nv.gov/covid-19-vaccine/"
+	},
+	{
+		"STATE" : "New Hampshire",
+		"LINK" : "https://www.vaccines.nh.gov/"
+	},
+	{
+		"STATE" : "New Jersey",
+		"LINK" : "https://covid19.nj.gov/pages/vaccine"
+	},
+	{
+		"STATE" : "New Mexico",
+		"LINK" : "https://cv.nmhealth.org/covid-vaccine/"
+	},
+	{
+		"STATE" : "New York",
+		"LINK" : "https://covid19vaccine.health.ny.gov/"
+	},
+	{
+		"STATE" : "North Carolina",
+		"LINK" : "https://covid19.ncdhhs.gov/vaccines"
+	},
+	{
+		"STATE" : "North Dakota",
+		"LINK" : "https://www.health.nd.gov/covid-19-vaccine-information"
+	},
+	{
+		"STATE" : "Ohio",
+		"LINK" : "https://coronavirus.ohio.gov/wps/portal/gov/covid-19/covid-19-vaccination-program"
+	},
+	{
+		"STATE" : "Oklahoma",
+		"LINK" : "https://vaccinate.oklahoma.gov/en-US/"
+	},
+	{
+		"STATE" : "Oregon",
+		"LINK" : "https://covidvaccine.oregon.gov/"
+	},
+	{
+		"STATE" : "Pennsylvania",
+		"LINK" : "https://www.pa.gov/guides/get-vaccinated/"
+	},
+	{
+		"STATE" : "Rhode Island",
+		"LINK" : "https://covid.ri.gov/vaccination"
+	},
+	{
+		"STATE" : "South Carolina",
+		"LINK" : "https://scdhec.gov/index.php/covid19/covid-19-vaccine"
+	},
+	{
+		"STATE" : "South Dakota",
+		"LINK" : "https://doh.sd.gov/Covid/Vaccine/Public.aspx"
+	},
+	{
+		"STATE" : "Tennessee",
+		"LINK" : "https://covid19.tn.gov/covid-19-vaccines/"
+	},
+	{
+		"STATE" : "Texas",
+		"LINK" : "https://www.dshs.texas.gov/covidvaccine/"
+	},
+	{
+		"STATE" : "Utah",
+		"LINK" : "https://coronavirus.utah.gov/vaccine/"
+	},
+	{
+		"STATE" : "Vermont",
+		"LINK" : "https://www.healthvermont.gov/covid-19/vaccine/about-covid-19-vaccines-vermont"
+	},
+	{
+		"STATE" : "Virginia",
+		"LINK" : "https://www.vdh.virginia.gov/covid-19-vaccine/"
+	},
+	{
+		"STATE" : "Washington",
+		"LINK" : "https://www.doh.wa.gov/Emergencies/COVID19/vaccine"
+	},
+	{
+		"STATE" : "West Virginia",
+		"LINK" : "https://dhhr.wv.gov/covid-19/pages/vaccine.aspx"
+	},
+	{
+		"STATE" : "Wisconsin",
+		"LINK" : "https://www.dhs.wisconsin.gov/covid-19/vaccine-about.htm"
+	},
+	{
+		"STATE" : "Wyoming",
+		"LINK" : "https://health.wyo.gov/publichealth/immunization/wyoming-covid-19-vaccine-information/"
+	}
+]
