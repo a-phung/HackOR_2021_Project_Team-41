@@ -1,0 +1,202 @@
+ [
+        {
+            "State": "Alabama",
+            "Website_Vaccinations": "https://alpublichealth.maps.arcgis.com/apps/opsdashboard/index.html#/e4a232feb1344ce0afd9ac162f3ac4ba"
+        },
+        {
+            "State": "Alaska",
+            "Website_Vaccinations": "https://alaska-coronavirus-vaccine-outreach-alaska-dhss.hub.arcgis.com/app/c74be37e02b44bb8b8b40515eabbab55"
+        },
+        {
+            "State": "Arizona",
+            "Website_Vaccinations": "https://www.azdhs.gov/documents/preparedness/epidemiology-disease-control/infectious-disease-epidemiology/novel-coronavirus/vaccine-phases.pdf"
+        },
+        {
+            "State": "Arkansas",
+            "Website_Vaccinations": "https://www.healthy.arkansas.gov/programs-services/topics/covid-19-vaccination-plan"
+        },
+        {
+            "State": "California",
+            "Website_Vaccinations": "https://public.tableau.com/views/COVID-19VaccineDashboardPublicv2/Vaccine?:language=en&:embed=y&:embed_code_version=3&:loadOrderID=0&:display_count=y&publish=yes&:origin=viz_share_link"
+        },
+        {
+            "State": "Colorado",
+            "Website_Vaccinations": "https://covid19.colorado.gov/vaccine"
+        },
+        {
+            "State": "Connecticut",
+            "Website_Vaccinations": "https://www.ctpost.com/projects/coronavirus-vaccine-tracker-connecticut-ct/"
+        },
+        {
+            "State": "Delaware",
+            "Website_Vaccinations": "https://myhealthycommunity.dhss.delaware.gov/locations/state/vaccine-tracker#vaccine_tracker"
+        },
+        {
+            "State": "Florida",
+            "Website_Vaccinations": "http://ww11.doh.state.fl.us/comm/_partners/covid19_report_archive/vaccine/vaccine_report_latest.pdf"
+        },
+        {
+            "State": "Georgia",
+            "Website_Vaccinations": "https://dph.georgia.gov/covid-vaccine"
+        },
+        {
+            "State": "Hawaii",
+            "Website_Vaccinations": "https://health.hawaii.gov/coronavirusdisease2019/what-you-should-know/current-situation-in-hawaii/#vaccine"
+        },
+        {
+            "State": "Idaho",
+            "Website_Vaccinations": "https://coronavirus.idaho.gov/"
+        },
+        {
+            "State": "Illinois",
+            "Website_Vaccinations": "https://www.dph.illinois.gov/covid19/vaccinedata?county=Illinois"
+        },
+        {
+            "State": "Indiana",
+            "Website_Vaccinations": "https://www.coronavirus.in.gov/vaccine/2680.htm"
+        },
+        {
+            "State": "Iowa",
+            "Website_Vaccinations": "https://coronavirus.iowa.gov/pages/vaccineinformation"
+        },
+        {
+            "State": "Kansas",
+            "Website_Vaccinations": "https://www.kansasvaccine.gov/158/Data"
+        },
+        {
+            "State": "Kentucky",
+            "Website_Vaccinations": "https://govstatus.egov.com/ky-covid-vaccine"
+        },
+        {
+            "State": "Louisiana",
+            "Website_Vaccinations": "https://ldh.la.gov/Coronavirus/"
+        },
+        {
+            "State": "Maine",
+            "Website_Vaccinations": "https://www.maine.gov/covid19/vaccines"
+        },
+        {
+            "State": "Maryland",
+            "Website_Vaccinations": "https://coronavirus.maryland.gov/#Vaccine"
+        },
+        {
+            "State": "Massachusetts",
+            "Website_Vaccinations": "https://www.mass.gov/info-details/massachusetts-covid-19-vaccination-data-and-updates#weekly-covid-19-vaccination-report-"
+        },
+        {
+            "State": "Michigan",
+            "Website_Vaccinations": "https://www.michigan.gov/coronavirus/0,9753,7-406-98178_103214_103272-547150--,00.html"
+        },
+        {
+            "State": "Minnesota",
+            "Website_Vaccinations": "https://mn.gov/covid19/vaccine/data/index.jsp"
+        },
+        {
+            "State": "Mississippi",
+            "Website_Vaccinations": "https://msdh.ms.gov/msdhsite/_static/resources/12130.pdf"
+        },
+        {
+            "State": "Missouri",
+            "Website_Vaccinations": "https://covidvaccine.mo.gov/data/"
+        },
+        {
+            "State": "Montana",
+            "Website_Vaccinations": "https://montana.maps.arcgis.com/apps/MapSeries/index.html?appid=7c34f3412536439491adcc2103421d4b"
+        },
+        {
+            "State": "Nebraska",
+            "Website_Vaccinations": "https://experience.arcgis.com/experience/ece0db09da4d4ca68252c3967aa1e9dd/page/page_1/"
+        },
+        {
+            "State": "Nevada",
+            "Website_Vaccinations": "https://nvhealthresponse.nv.gov/"
+        },
+        {
+            "State": "New Hampshire",
+            "Website_Vaccinations": "https://www.nh.gov/covid19/dashboard/vaccination.htm#dash"
+        },
+        {
+            "State": "New Jersey",
+            "Website_Vaccinations": "https://www.nj.gov/health/cd/topics/covid2019_dashboard.shtml"
+        },
+        {
+            "State": "New Mexico",
+            "Website_Vaccinations": "https://cvvaccine.nmhealth.org/public-dashboard.html"
+        },
+        {
+            "State": "New York",
+            "Website_Vaccinations": "https://covid19vaccine.health.ny.gov/covid-19-vaccine-tracker"
+        },
+        {
+            "State": "North Carolina",
+            "Website_Vaccinations": "https://covid19.ncdhhs.gov/dashboard/vaccinations"
+        },
+        {
+            "State": "North Dakota",
+            "Website_Vaccinations": "https://www.health.nd.gov/covid19vaccine/dashboard"
+        },
+        {
+            "State": "Ohio",
+            "Website_Vaccinations": "https://coronavirus.ohio.gov/wps/portal/gov/covid-19/dashboards/covid-19-vaccine/covid-19-vaccination-dashboard"
+        },
+        {
+            "State": "Oklahoma",
+            "Website_Vaccinations": "https://oklahoma.gov/covid19.html"
+        },
+        {
+            "State": "Oregon",
+            "Website_Vaccinations": "https://public.tableau.com/profile/oregon.health.authority.covid.19#!/vizhome/OregonCOVID-19VaccinationTrends/OregonStatewideVaccinationTrends"
+        },
+        {
+            "State": "Pennsylvania",
+            "Website_Vaccinations": "https://www.health.pa.gov/topics/disease/coronavirus/Vaccine/Pages/Dashboard.aspx"
+        },
+        {
+            "State": "Rhode Island",
+            "Website_Vaccinations": "https://ri-department-of-health-covid-19-data-rihealth.hub.arcgis.com/"
+        },
+        {
+            "State": "South Carolina",
+            "Website_Vaccinations": "https://scdhec.gov/covid19/covid-19-vaccine-allocation"
+        },
+        {
+            "State": "South Dakota",
+            "Website_Vaccinations": "https://doh.sd.gov/COVID/Dashboard.aspx?"
+        },
+        {
+            "State": "Tennessee",
+            "Website_Vaccinations": "https://www.tn.gov/health/cedep/ncov/covid-19-vaccine-information.html"
+        },
+        {
+            "State": "Texas",
+            "Website_Vaccinations": "https://tabexternal.dshs.texas.gov/t/THD/views/COVID-19VaccineinTexasDashboard/Summary?%3Aorigin=card_share_link&%3Aembed=y&%3AisGuestRedirectFromVizportal=y"
+        },
+        {
+            "State": "Utah",
+            "Website_Vaccinations": "https://coronavirus-dashboard.utah.gov/vaccines.html"
+        },
+        {
+            "State": "Vermont",
+            "Website_Vaccinations": "https://www.healthvermont.gov/covid-19/vaccine/covid-19-vaccine-dashboard"
+        },
+        {
+            "State": "Virginia",
+            "Website_Vaccinations": "https://www.vdh.virginia.gov/coronavirus/covid-19-vaccine-summary/"
+        },
+        {
+            "State": "Washington",
+            "Website_Vaccinations": "https://www.doh.wa.gov/Emergencies/COVID19/DataDashboard"
+        },
+        {
+            "State": "West Virginia",
+            "Website_Vaccinations": "https://dhhr.wv.gov/COVID-19/Pages/default.aspx"
+        },
+        {
+            "State": "Wisconsin",
+            "Website_Vaccinations": "https://www.dhs.wisconsin.gov/covid-19/vaccine-data.htm#day"
+        },
+        {
+            "State": "Wyoming",
+            "Website_Vaccinations": "https://health.wyo.gov/publichealth/immunization/wyoming-covid-19-vaccine-information/covid-19-vaccine-distribution-data/"
+        }
+    ]

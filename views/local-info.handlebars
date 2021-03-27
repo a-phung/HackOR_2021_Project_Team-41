@@ -1,3 +1,5 @@
+{{>navbar}}
+
 <div>
     <h1>Covid Information</h1>
 </div>
@@ -6,7 +8,7 @@
         <label for="county_name">Enter Your County:</label><br>
         <input type="text" id="countyName" size="30" maxlength="100" >
         <select id="stateName"  maxlength="100">
-            <option>Select State</option>
+            <option>Select State</option> 
         </select>
         <input id="submitCounty" value="Submit" onclick="getCountyInfo()">
     </form>
@@ -14,6 +16,10 @@
 
 <div>
 <p>Total Vaccine Distributed</p>
+
+{{#if errorMessage.length}}
+    <p>{{errorMessage}}</p>
+{{/if}}
 
     {{#each CountryVaccines}}
 
@@ -28,7 +34,14 @@
         <p>{{date}} : {{total_distributed}}</p>
         {{/if}}
     {{/each}}
-</div>
 
+        <script type="text/javascript">
+            $(document).ready(function () {
+                Handlebars.registerPartial('navbar', '{{navbar}}');
+            })
+        </script>
 
     <script src="/scripts/local_info_scripts.js"></script>
+
+</div>
+

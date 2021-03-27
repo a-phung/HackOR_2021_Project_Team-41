@@ -42,7 +42,6 @@ function updateStateDropDown() {
 }
 
 function getCountyInfo() {
-    console.log('ajax!!')
     var countyName = document.getElementById("countyName").value
     var stateName = document.getElementById("stateName").value
     let url = "https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json";
@@ -51,11 +50,17 @@ function getCountyInfo() {
         url: url,
         type: 'GET',
         dataType: 'json',
-        // data: { expert: expert, skillset: skillset },
         success: function (result) {
             var info = result.filter((x) => x.subregion.toLowerCase() == countyName.toLowerCase() && x.region.toLowerCase() == stateName.toLowerCase());
+            console.log("Getting code")
             console.log(info);
-            window.location.href = "/local-info/county/" + info[0].us_county_fips;
+            if(info.length == 0) {
+                window.location.href = "/local-info/not-found"
+            }
+            else {
+                countyCode = info[0].us_county_fips
+                window.location.href = "/local-info/county/" + info[0].us_county_fips;
+            }
         }
     });
 

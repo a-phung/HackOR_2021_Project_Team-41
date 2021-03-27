@@ -1,0 +1,27 @@
+{{>navbar}}
+
+<div>
+    <h1>Helpful Links</h1>
+</div>
+<p> 
+        {{#each stateVaccineLinks}}
+       
+        <a href="#link_{{State}}">{{State}}</a>
+        {{/each}}
+
+</p>
+
+    {{#each stateVaccineLinks}}
+       <h2 id="link_{{State}}">{{State}}</h2>
+       <a href="{{Website_Vaccinations}}" target="_blank">Link</a>
+    {{/each}}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        Handlebars.registerPartial('navbar', '{{navbar}}');
+    })
+</script>
+
+<script src="/scripts/local_info_scripts.js"></script>
+
+</div>
