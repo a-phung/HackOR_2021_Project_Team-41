@@ -1,0 +1,23 @@
+{
+  "name": "hackor_2021_project",
+  "version": "1.0.0",
+  "description": "HackOR project. Topic: COVID-19.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-phung/HackOR_2021_Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a-phung/HackOR_2021_Project/issues"
+  },
+  "homepage": "https://github.com/a-phung/HackOR_2021_Project#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1"
+  }
+}
