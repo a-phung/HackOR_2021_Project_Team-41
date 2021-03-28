@@ -216,18 +216,32 @@
         {{/if}}
 
 
-        {{!-- {{#each CountryVaccines}}
-        {{#if total_vaccinations.length}}
-        <p>{{date}} : {{total_vaccinations}}</p>
+        {{#if recentCaseData.length}}
+        <h3>Recent County Cases</h3>
         
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">County</th>
+                    <th scope="col">Cases</th>
+                    <th scope="col">Deaths</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each recentCaseData}}
+                {{#if cases.length}}
+                <tr>
+                    <th scope="row">{{date}}</th>
+                    <td>{{county}}</td>
+                    <td>{{cases}}</td>
+                    <td>{{deaths}}</td>
+                </tr>
+                {{/if}}
+                {{/each}}
+            </tbody>
+        </table>
         {{/if}}
-        {{/each}} --}}
-    
-    {{#each StateVaccines}}
-        {{#if total_distributed.length}}
-        <p>{{date}} : {{total_distributed}}</p>
-        {{/if}}
-    {{/each}}
 
         <script type="text/javascript">
             $(document).ready(function () {

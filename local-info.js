@@ -54,7 +54,7 @@ module.exports = function () {
         countyName = getCountyNameFromCode(index);
 
         options = { header: true };
-        const dataStream = request.get(maskDataUrl);
+        const dataStream = request.get(countyCaseDataUrl);
         const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
 
         dataStream.pipe(parseStream);
@@ -65,7 +65,7 @@ module.exports = function () {
         });
 
         parseStream.on("finish", () => {
-            var result = data.filter((x) => x.county == countyName);
+            var result = data.filter((x) => x.fips == index);
             context.recentCaseData = result;
             complete();
         });
@@ -89,10 +89,10 @@ module.exports = function () {
         parseStream.on("finish", () => {
             context.CountryVaccines = data;
 
-            dateRange.setDate(dateRange.getDate() - 14);
-            var result = data.filter((x) => x.date > dateRange);
-            console.log(result);
-            context.CountryVaccines2Weeks = result;
+            // dateRange.setDate(dateRange.getDate() - 14);
+            // var result = data.filter((x) => x.date > dateRange);
+            // console.log(result);
+            // context.CountryVaccines2Weeks = result;
 
             complete();
         });
@@ -181,7 +181,7 @@ module.exports = function () {
 
     router.get('/not-found', function (req, res) {
         var callbackCount = 0;
-        var context = {};S
+        var context = {};
         // var index = [req.params.id];
         // getCountryVaccinationData(res, context, complete, req.params.id);
         countyNotFoundMessage(res, context, complete, req.params.id);
