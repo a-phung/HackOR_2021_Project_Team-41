@@ -54,7 +54,7 @@ module.exports = function () {
         countyName = getCountyNameFromCode(index);
 
         options = { header: true };
-        const dataStream = request.get(maskDataUrl);
+        const dataStream = request.get(countyCaseDataUrl);
         const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
 
         dataStream.pipe(parseStream);
@@ -65,7 +65,7 @@ module.exports = function () {
         });
 
         parseStream.on("finish", () => {
-            var result = data.filter((x) => x.county == countyName);
+            var result = data.filter((x) => x.fips == index);
             context.recentCaseData = result;
             complete();
         });
@@ -76,6 +76,8 @@ module.exports = function () {
         options = { header: true };
         const dataStream = request.get(countryLevelVaccineUrl);
         const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
+        var dateRange = new Date();
+        
 
         dataStream.pipe(parseStream);
 
@@ -86,6 +88,12 @@ module.exports = function () {
 
         parseStream.on("finish", () => {
             context.CountryVaccines = data;
+
+            // dateRange.setDate(dateRange.getDate() - 14);
+            // var result = data.filter((x) => x.date > dateRange);
+            // console.log(result);
+            // context.CountryVaccines2Weeks = result;
+
             complete();
         });
 
