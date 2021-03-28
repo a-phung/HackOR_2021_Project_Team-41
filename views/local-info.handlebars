@@ -15,7 +15,7 @@
 <div>
 <br><br>
 
-<div id="graph-nav">
+<div id="graph-nav" onclick="myFunction()">
   <button class="btn">New Cases Per Day</button>
   <button class="btn active">Vaccines Distributed</button>
 </div>
@@ -25,11 +25,22 @@
 {{/if}}
 
 <br>
+    <!--
+    <div class="container" id="othergraph" style="display:none;">
+    <section class="state_chart" style="background-color:white;">
 
+        <div style="display: flex; justify-content: center; width: 100%; vertical-align: top;">
+
+            <canvas id="daily_trends" width="400" height="200"></canvas>
+
+        </div>
+    </section>
+    </div>
+    -->
 
     <!--Code for CountryVaccines graph-->
     {{#if CountryVaccines}}
-    <div class="container">
+    <div class="graphcontainer" id="graph">
     <section class="vacc_chart" style="background-color:white;"><!--Color for graph background-->
 
         <div style="display: flex; justify-content: center; width: 100%; vertical-align: top; color: grey;">
@@ -96,7 +107,7 @@
     <!--Code for StateVaccines graph-->
     {{#if StateVaccines}}
     <div class="container">
-    <section class="state_chart" style="background-color:black;"><!--Color for graph background-->
+    <section class="state_chart" style="background-color:white;"><!--Color for graph background-->
 
         <div style="display: flex; justify-content: center; width: 100%; vertical-align: top;">
 
@@ -124,8 +135,8 @@
                             label: 'Total Vaccine Distributed for States',
                             data: total_vacc,
                             //fill: false,
-                            borderColor: 'rgba(75, 192, 192, 1)', //color for line in line graph
-                            backgroundColor: 'rgba(75, 192, 192, 0.2)', //color for line graph fill
+                            borderColor: '#4995A3', //color for line in line graph
+                            backgroundColor: '#78DCF0', //color for line graph fill
                             borderWidth: 1
                         }
                         ]
@@ -133,19 +144,19 @@
                     options: {
                         legend: {
                             labels:{
-                                fontColor: 'white' //font color for label on top of chart
+                                fontColor: 'black' //font color for label on top of chart
                             }
 
                         },
                         scales: {
                             xAxes: [{
                                 ticks: {
-                                    fontColor: 'white' //font color for x-axis label
+                                    fontColor: 'black' //font color for x-axis label
                                 }
                             }],
                             yAxes: [{
                                 ticks: {
-                                    fontColor: 'white' //font color for y-axis label
+                                    fontColor: 'black' //font color for y-axis label
                                 }
                             }]
                         }

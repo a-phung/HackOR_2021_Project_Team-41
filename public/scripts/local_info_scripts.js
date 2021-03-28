@@ -1,6 +1,48 @@
 //     const request = require("request");
 // let url = "https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json";
 // let options = { json: true };
+/*window.addEventListener('load', setup);
+
+async function setup() {
+    const ctx = document.getElementById('daily_trends').getContext('2d');
+    const trends = await getData();
+    const myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: trends.days,
+        datasets: [
+          {
+            label: 'Daily trends in the US',
+            data: trends.new_cases,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {}
+    });
+  }
+
+  async function getData() {
+    const response = await fetch('case_daily_trends__united_states.csv', {
+        headers: {
+            'content-type': 'text/csv;charset=UTF-8',
+            //'Authorization': //in case you need authorisation
+        }
+    });
+    const data = await response.text();
+    const days = [];
+    const new_cases = [];
+    const rows = data.split('\n').slice(3);
+    rows.forEach(row => {
+      const cols = row.split(',');
+      days.push(cols[0]);
+      new_cases.push(cols[1]);
+    });
+    return { days, new_cases };
+  }
+  */
 
 function getCountyID() {
     var countyName = document.getElementById("countyName").value
@@ -81,3 +123,19 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+
+function myFunction() {
+    var x = document.getElementById("graph");
+    var y = document.getElementById("othergraph")
+    if (x.style.display === "none" && y.style.display === 'block') {
+      x.style.display = "block";
+      y.style.display = "none";
+    } else {
+      x.style.display = "none";
+      y.style.display = "block"
+    }
+    
+  }
+
+
