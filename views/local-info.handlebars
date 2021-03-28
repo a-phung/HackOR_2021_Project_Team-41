@@ -8,11 +8,12 @@
         <select id="stateName"  maxlength="100">
             <option>Select State</option> 
         </select>
-        <button type="submit" class="btn btn-secondary btn-lg" id="submitCounty" value="Submit" onclick="getCountyInfo()">Submit</button>
+        <button type="submit" class="btn btn-pink btn-lg" id="submitCounty" value="Submit" onclick="getCountyInfo()">Submit</button>
     </form>
 </div>
 
 <div>
+<br><br>
 
 <div id="graph-nav">
   <button class="btn">New Cases Per Day</button>
@@ -157,14 +158,70 @@
     {{/if}}
     <!--End of code for StateVaccines graph-->
 
-<p>Total Vaccine Distributed</p>
+<br><br>
 
+{{#if CountryVaccines.length}}
+<h3>Total Vaccine Distributed</h3>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Total Vaccinations</th>
+            <th scope="col">People Vaccinated</th>
+            <th scope="col">People Fully Vaccinated</th>
+        </tr>
+    </thead>
+    <tbody>
         {{#each CountryVaccines}}
+        {{#if total_vaccinations.length}}
+        <tr>
+            <th scope="row">{{date}}</th>
+            <td>{{total_vaccinations}}</td>
+            <td>{{people_vaccinated}}</td>
+            <td>{{people_fully_vaccinated}}</td>
+        </tr>
+        {{/if}}
+        {{/each}}
+    </tbody>
+</table>
+        {{/if}}
+
+{{#if StateVaccines.length}}
+<h3>Total Vaccine Distributed</h3>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Total Vaccinations</th>
+            <th scope="col">People Vaccinated</th>
+            <th scope="col">People Fully Vaccinated</th>
+            <th scope="col">People Fully Vaccinated per 100k</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each StateVaccines}}
+        {{#if total_distributed.length}}
+        <tr>
+            <th scope="row">{{date}}</th>
+            <td>{{total_vaccinations}}</td>
+            <td>{{total_distributed}}</td>
+            <td>{{people_vaccinated}}</td>
+            <td>{{people_fully_vaccinated_per_hundred}}</td>
+        </tr>
+        {{/if}}
+        {{/each}}
+    </tbody>
+</table>
+        {{/if}}
+
+
+        {{!-- {{#each CountryVaccines}}
         {{#if total_vaccinations.length}}
         <p>{{date}} : {{total_vaccinations}}</p>
         
         {{/if}}
-        {{/each}}
+        {{/each}} --}}
     
     {{#each StateVaccines}}
         {{#if total_distributed.length}}

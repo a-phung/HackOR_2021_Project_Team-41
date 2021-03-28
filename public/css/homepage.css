@@ -32,14 +32,14 @@
 }
 
 .navbar {
-    background-color: lightblue;
+    background-color: #78DCF0;
 }
 
 .btn {
     border: black;
     outline: none;
     padding: 10px 16px;
-    background-color: #f1f1f1;
+    background-color: #F09785;
     cursor: pointer;
   }
   

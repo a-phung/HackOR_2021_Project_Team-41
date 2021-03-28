@@ -13,7 +13,7 @@ const path = require("path");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// app.use('/about-vaccine', require('./about-vaccine.js'));
+app.use('/about-us', require('./about-us.js'));
 app.use('/local-info', require('./local-info.js'));
 app.use('/covid-info', require('./covid-info.js'));
 app.use('/vaccine-info', require('./vaccine-info.js'));
@@ -23,7 +23,7 @@ app.use('/helpful-links', require('./helpful-links.js'));
 app.set('port', 30000);
 
 app.get('/', (req, res) => {
-  res.render('local-info', {
+  res.render('homepage', {
     title: 'Home',
     style: 'homepage.css',
     page: 'homepage'});

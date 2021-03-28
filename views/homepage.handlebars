@@ -1,20 +1,65 @@
 {{>navbar}}
 
-<div>
-    <h1>Covid Information</h1>
+<div class="container container-body">
+    <br>
+    <br>
+    <br>
+
+    <div>
+
+        <h1 class="text-center ">Welcome to COVID Clarified</h1>
+
+
+            <h3>Getting Started</h3>
+        <div class="row">
+            <p>To view information in the US or your local county, select "Local Information" above, or click the link.
+            </p>
+            <p>To view a 3D model of COVID-19, follow the directions to below!</p>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+        <div class="col-md-4">
+            <br><br>
+            <figure class="figure">
+                <img src="/assets/COVID-19_AR_3d_Model.png" alt="..." class="img-thumbnail">
+                <figcaption class="figure-caption">3D model of COVID-19, based on the image “Illustration of the
+                    ultrastructure of
+                    the Covid-19 virus”
+                    (CDC/SCIENCE PHOTO LIBRARY)</figcaption>
+            </figure>
+        </div>
+        <div class="col-md-4">
+        <span class="align-middle">
+            <p>How to view:</p>
+            <ol>
+                <li>For the (first) QR-code, to visualize a COVID-19 virion, point your phone camera on the QR-code to
+                    open
+                    the link to echoAR, and keep your phone camera pointed on the QR-code to see an interactable 3d
+                    model of
+                    a COVID-19 virion.
+                <li>For the (second) QR-code, to visualize a COVID-19 virion in your browser, point your phone camera on
+                    the
+                    QR-code to open the link to echoAR. An interactable 3d model of a COVID-19 virion will appear.
+                    Select
+                    the "See in AR" option to view the virion in augmented reality on a floor surface.
+            </ol>
+        </span>
+        </div>
+
+    </div>
 </div>
-<div>
-    <form>
-        <label for="zip_code">Enter Zip Code:</label><br>
-        <input type="number" id="zipnum" size="30" maxlength="100">
-        <input type="submit" id="submitzip" value="Submit Zip">
-    </form>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        Handlebars.registerPartial('navbar', '{{navbar}}');
+    })
+</script>
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                Handlebars.registerPartial('navbar', '{{navbar}}');
-            })
-        </script>
-
+</div>
 </div>
