@@ -14,7 +14,10 @@
 
 <div>
 
-
+<div id="graph-nav">
+  <button class="btn">New Cases Per Day</button>
+  <button class="btn active">Vaccines Distrubuted</button>
+</div>
 
 {{#if errorMessage.length}}
     <p>{{errorMessage}}</p>
@@ -26,7 +29,7 @@
     <!--Code for CountryVaccines graph-->
     {{#if CountryVaccines}}
     <div class="container">
-    <section class="vacc_chart" style="background-color:black;"><!--Color for graph background-->
+    <section class="vacc_chart" style="background-color:white;"><!--Color for graph background-->
 
         <div style="display: flex; justify-content: center; width: 100%; vertical-align: top; color: grey;">
 
@@ -52,6 +55,72 @@
                         datasets: [
                         {
                             label: 'Total Vaccine Distributed',
+                            data: total_vacc,
+                            //fill: false,
+                            borderColor: '#4995A3', //color for line in line graph
+                            backgroundColor: '#78DCF0', //color for line graph fill
+                            borderWidth: 1
+                        }
+                        ]
+                    },
+                    options: {
+                        legend: {
+                            labels:{
+                                fontColor: 'black' //font color for label on top of chart
+                            }
+
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    fontColor: 'black' //font color for x-axis label
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    fontColor: 'black' //font color for y-axis label
+
+                                }
+                            }]
+                        }
+                    }
+                    });
+            </script>
+        </div>
+    </section>
+    </div>
+    {{/if}}
+    <!--End of code for CountryVaccines graph-->
+
+    <!--Code for StateVaccines graph-->
+    {{#if StateVaccines}}
+    <div class="container">
+    <section class="state_chart" style="background-color:black;"><!--Color for graph background-->
+
+        <div style="display: flex; justify-content: center; width: 100%; vertical-align: top;">
+
+            <canvas id="state-distribution" width="400" height="200"></canvas>
+
+            <script>
+                var ctx = document.getElementById('state-distribution');
+
+                var dates = [];
+                var total_vacc = [];
+                {{#each StateVaccines}} //Stores data from CountryVaccines into arrays
+                    {{#if total_distributed.length}} 
+                        dates.push("{{date}}"); //Converted {{date}} data from handlebars to string to keep original format
+                        var vacc = {{total_distributed}};
+                        total_vacc.push(vacc);
+                    {{/if}}
+                {{/each}}
+
+                const myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: dates,
+                        datasets: [
+                        {
+                            label: 'Total Vaccine Distributed for States',
                             data: total_vacc,
                             //fill: false,
                             borderColor: 'rgba(75, 192, 192, 1)', //color for line in line graph
@@ -86,7 +155,7 @@
     </section>
     </div>
     {{/if}}
-    <!--End of code for CountryVaccines graph-->
+    <!--End of code for StateVaccines graph-->
 
 <p>Total Vaccine Distributed</p>
 
@@ -111,7 +180,3 @@
 
     <script src="/scripts/local_info_scripts.js"></script>
 
-</div>
-
-
-</div>

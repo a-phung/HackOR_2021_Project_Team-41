@@ -34,3 +34,17 @@
 .navbar {
     background-color: lightblue;
 }
+
+.btn {
+    border: black;
+    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Style the active class (and buttons on mouse-over) */
+  .active, .btn:hover {
+    background-color: grey;
+    color: white;
+  }
