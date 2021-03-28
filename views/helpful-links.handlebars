@@ -1,20 +1,37 @@
 {{>navbar}}
+<div class="container body-container">
 
 <div>
     <h1>Helpful Links</h1>
+    <p>See a link that's wrong, or want to add one? <a href="/helpful-links/add">Let Us Know!</a></p>
 </div>
+
+<div>
+    <h2>General Information: </h2>
+    <h4>United States</h4>
+    <p>U.S. Center for Disease Control - <a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html" target="_blank">Link</a></p>
+
+    <h4>Global</h4>
+    <p>World Health Organization - <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">Link</a></p>
+</div>
+
+<div>
+    <h2>By State: </h2>
+
 <p> 
         {{#each stateVaccineLinks}}
        
-        <a href="#link_{{State}}">{{State}}</a>
+        <a href="#link_{{State}}">{{State}}</a> | 
         {{/each}}
 
 </p>
 
     {{#each stateVaccineLinks}}
-       <h2 id="link_{{State}}">{{State}}</h2>
-       <a href="{{Website_Vaccinations}}" target="_blank">Link</a>
+       <h3 id="link_{{State}}">{{State}}</h3>
+       <p>Vaccine Distrubution Plan - <a href="{{Website_Vaccinations}}" target="_blank">Link</a></p>
+        <p>Re-Opening Status - NA</p>
     {{/each}}
+</div>
 
 <script type="text/javascript">
     $(document).ready(function () {

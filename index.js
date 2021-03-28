@@ -16,14 +16,14 @@ app.use(express.json());
 // app.use('/about-vaccine', require('./about-vaccine.js'));
 app.use('/local-info', require('./local-info.js'));
 app.use('/covid-info', require('./covid-info.js'));
-app.use('/vaccine-info', require('./covid-info.js'));
+app.use('/vaccine-info', require('./vaccine-info.js'));
 app.use('/helpful-links', require('./helpful-links.js'));
 
 
 app.set('port', 30000);
 
 app.get('/', (req, res) => {
-  res.render('homepage', {
+  res.render('local-info', {
     title: 'Home',
     style: 'homepage.css',
     page: 'homepage'});

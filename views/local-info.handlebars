@@ -1,35 +1,31 @@
-{{>navbar}}
+
+<div class="container body-container">
 
 <div>
-    <h1>Covid Information</h1>
-</div>
-<div>
-    <form>
-        <label for="county_name">Enter Your County:</label><br>
-        <input type="text" id="countyName" size="30" maxlength="100" >
+    <form class="form-inline" > 
+        <label for="county_name">COVID-19 Clarified for:</label><br>
+        <input class="enter-county-box" type="text" id="countyName" >
         <select id="stateName"  maxlength="100">
             <option>Select State</option> 
         </select>
-        <input id="submitCounty" value="Submit" onclick="getCountyInfo()">
+        <button type="submit" class="btn btn-secondary btn-lg" id="submitCounty" value="Submit" onclick="getCountyInfo()">Submit</button>
     </form>
 </div>
 
 <div>
-<p>Total Vaccine Distributed</p>
+
+
 
 {{#if errorMessage.length}}
     <p>{{errorMessage}}</p>
 {{/if}}
 
-    {{#each CountryVaccines}}
-        {{#if total_vaccinations.length}}    
-            <p>{{date}} : {{total_vaccinations}}</p>
+<br>
 
-        {{/if}}
-    {{/each}}
 
     <!--Code for CountryVaccines graph-->
     {{#if CountryVaccines}}
+    <div class="container">
     <section class="vacc_chart" style="background-color:black;"><!--Color for graph background-->
 
         <div style="display: flex; justify-content: center; width: 100%; vertical-align: top; color: grey;">
@@ -88,8 +84,18 @@
             </script>
         </div>
     </section>
+    </div>
     {{/if}}
     <!--End of code for CountryVaccines graph-->
+
+<p>Total Vaccine Distributed</p>
+
+        {{#each CountryVaccines}}
+        {{#if total_vaccinations.length}}
+        <p>{{date}} : {{total_vaccinations}}</p>
+        
+        {{/if}}
+        {{/each}}
     
     {{#each StateVaccines}}
         {{#if total_distributed.length}}
@@ -107,3 +113,5 @@
 
 </div>
 
+
+</div>

@@ -37,5 +37,17 @@ module.exports = function () {
         }
 
     });
+
+    router.get('/add', function (req, res) {
+        var callbackCount = 0;
+        var context = {};
+        var index = -1;
+
+        res.render('add-helpful-link', context);
+
+    });
+
+
+
     return router;
 }();
