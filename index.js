@@ -23,6 +23,14 @@ app.get('/', (req, res) => {
     page: 'homepage'});
 });
 
+app.get('/local-info', (req, res) => {
+  res.render('local-info', {
+    title: 'Local Information',
+    style: 'local-info.css',
+    page: 'local-info'});
+});
+
+
 app.use(function(req,res){
     res.type('text/plain');
     res.status(404);

@@ -16,12 +16,74 @@
 <p>Total Vaccine Distributed</p>
 
     {{#each CountryVaccines}}
-
-        {{#if total_vaccinations.length}}
+        {{#if total_vaccinations.length}}    
             <p>{{date}} : {{total_vaccinations}}</p>
+
         {{/if}}
     {{/each}}
 
+    <!--Code for CountryVaccines graph-->
+    {{#if CountryVaccines}}
+    <section class="vacc_chart" style="background-color:black;"><!--Color for graph background-->
+
+        <div style="display: flex; justify-content: center; width: 100%; vertical-align: top; color: grey;">
+
+            <canvas id="vaccine-distribution" width="400" height="200"></canvas>
+
+            <script>
+                var ctx = document.getElementById('vaccine-distribution');
+
+                var dates = [];
+                var total_vacc = [];
+                {{#each CountryVaccines}} //Stores data from CountryVaccines into arrays
+                    {{#if total_vaccinations.length}} 
+                        dates.push("{{date}}"); //Converted {{date}} data from handlebars to string to keep original format
+                        var vacc = {{total_vaccinations}};
+                        total_vacc.push(vacc);
+                    {{/if}}
+                {{/each}}
+
+                const myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: dates,
+                        datasets: [
+                        {
+                            label: 'Total Vaccine Distributed',
+                            data: total_vacc,
+                            //fill: false,
+                            borderColor: 'rgba(75, 192, 192, 1)', //color for line in line graph
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)', //color for line graph fill
+                            borderWidth: 1
+                        }
+                        ]
+                    },
+                    options: {
+                        legend: {
+                            labels:{
+                                fontColor: 'white' //font color for label on top of chart
+                            }
+
+                        },
+                        scales: {
+                            xAxes: [{
+                                ticks: {
+                                    fontColor: 'white' //font color for x-axis label
+                                }
+                            }],
+                            yAxes: [{
+                                ticks: {
+                                    fontColor: 'white' //font color for y-axis label
+                                }
+                            }]
+                        }
+                    }
+                    });
+            </script>
+        </div>
+    </section>
+    {{/if}}
+    <!--End of code for CountryVaccines graph-->
     
     {{#each StateVaccines}}
         {{#if total_distributed.length}}
