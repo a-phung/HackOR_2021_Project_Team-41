@@ -10,8 +10,67 @@ module.exports = function () {
     stateLevelVaccineUrl = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/us_state_vaccinations.csv';
     countryLevelVaccineUrl = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/vaccinations/country_data/United%20States.csv'
     locationDataUrl = "https://raw.githubusercontent.com/Zoooook/CoronavirusTimelapse/master/static/population.json";
+    maskDataUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/mask-use/mask-use-by-county.csv"
+    countyCaseDataUrl = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties-recent.csv"
 
+    function getCountyMaskData(res, context, complete, countyCode) {
+        options = { header: true };
+        const dataStream = request.get(maskDataUrl);
+        const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
 
+        dataStream.pipe(parseStream);
+
+        let data = [];
+        parseStream.on("data", chunk => {
+            data.push(chunk);
+        });
+
+        parseStream.on("finish", () => {
+            var result = data.filter((x) => x.COUNTYFP == countyCode);
+            context.maskData = result;
+            complete();
+        });
+
+    }
+
+    function getCountyNameFromCode(countyCode) {
+        stateName = "";
+        let options = { json: true };
+        request(locationDataUrl, options, (error, res, body) => {
+            if (error) {
+                return console.log(error)
+            };
+
+            if (!error && res.statusCode == 200) {
+                var result = body.filter((x) => x.us_county_fips == countyCode);
+                countyName = result[0].subregion;
+                return countyName;
+            };
+        });
+    }
+
+    function getRecentCountyCaseData(res, context, complete, index) {
+
+        countyName = getCountyNameFromCode(index);
+
+        options = { header: true };
+        const dataStream = request.get(maskDataUrl);
+        const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
+
+        dataStream.pipe(parseStream);
+
+        let data = [];
+        parseStream.on("data", chunk => {
+            data.push(chunk);
+        });
+
+        parseStream.on("finish", () => {
+            var result = data.filter((x) => x.county == countyName);
+            context.recentCaseData = result;
+            complete();
+        });
+
+    }
 
     function getCountryVaccinationData(res, context, complete) {
         options = { header: true };
@@ -27,7 +86,6 @@ module.exports = function () {
 
         parseStream.on("finish", () => {
             context.CountryVaccines = data;
-            // console.log(data);
             complete();
         });
 
@@ -47,12 +105,8 @@ module.exports = function () {
             data.push(chunk);
         });
 
-        console.log("STate Name: ");
-        console.log(stateName);
         parseStream.on("finish", () => {
             var result = data.filter((x) => x.location == stateName);
-            // console.log(result);
-            console.log(result.length);
             context.StateVaccines = result;
             complete();
         });
@@ -70,14 +124,15 @@ module.exports = function () {
 
             if (!error && res.statusCode == 200) {
                 var result = body.filter((x) => x.us_county_fips == countyCode);
-                console.log("FILTER RESULT ");
-                console.log(result);
                 stateName = result[0].region;
                 getStateVaccinationContext(stateName, res, context, complete);
             };
         });
+    }
 
-
+    function countyNotFoundMessage(res, context, complete, id) {
+        context.errorMessage = "Sorry, the county couldn't be located";
+        complete();
     }
 
 
@@ -87,7 +142,6 @@ module.exports = function () {
         var context = {};
         var index = -1;
         getCountryVaccinationData(res, context, complete, index);
-        console.log(index)
 
         function complete() {
             callbackCount++;
@@ -104,11 +158,25 @@ module.exports = function () {
         var callbackCount = 0;
         var context = {};
         // var index = [req.params.id];
-        console.log("COUNTY INFO");
-        console.log(req.params.id);
         getStateVaccinationData(res, context, complete, req.params.id);
-        // console.log(index)
+        getCountyMaskData(res, context, complete, req.params.id);
+        getRecentCountyCaseData(res, context, complete, req.params.id);
 
+        function complete() {
+            callbackCount++;
+            if (callbackCount >= 3) {
+                res.render('local-info', context);
+
+            }
+        }
+    });
+
+    router.get('/not-found', function (req, res) {
+        var callbackCount = 0;
+        var context = {};
+        // var index = [req.params.id];
+        // getCountryVaccinationData(res, context, complete, req.params.id);
+        countyNotFoundMessage(res, context, complete, req.params.id);
         function complete() {
             callbackCount++;
             if (callbackCount >= 1) {
@@ -116,8 +184,6 @@ module.exports = function () {
 
             }
         }
-
-
     });
 
     return router;

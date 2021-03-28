@@ -6,12 +6,18 @@ var app = express();
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(express.static(__dirname + "/public"));
+app.use(express.static('public'));
+const path = require("path");
+
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static('public'));
 // app.use('/about-vaccine', require('./about-vaccine.js'));
 app.use('/local-info', require('./local-info.js'));
+app.use('/covid-info', require('./covid-info.js'));
+app.use('/vaccine-info', require('./covid-info.js'));
+app.use('/helpful-links', require('./helpful-links.js'));
 
 
 app.set('port', 30000);
