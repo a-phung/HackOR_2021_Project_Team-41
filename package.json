@@ -1,7 +1,7 @@
 {
   "name": "hackor_2021_project",
   "version": "1.0.0",
-  "description": "HackOR project. Topic: COVID-19.",
+  "description": "COVID Clarified: HackOR 2021 Project",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,7 +1,6 @@
-# HackOR_2021_Project
-Project submission for HackOR 2021 Hackathon.
+# COVID Clarified
 
-COVID Clarified is a web app developed by participants of the HackOR 2021 hackathon to create a one-stop information hub for COVID-19, citing trusted and verified sources for every state in the US. Our mission was to increase awareness around COVID-19 topics, such as case counts, vaccine information, and best health practices.
+COVID Clarified is a web app developed by Team 41 of the [HackOR 2021 hackathon](https://hackor.org/) to create a one-stop information hub for COVID-19, citing trusted and verified sources for every state in the US. Our mission was to increase awareness around COVID-19 topics, such as case counts, vaccine information, and best health practices.
 
 We wanted to know how we could...
 - increase awareness about COVID guidelines, numbers, and vaccine information,
