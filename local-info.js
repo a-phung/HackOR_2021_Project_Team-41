@@ -76,6 +76,8 @@ module.exports = function () {
         options = { header: true };
         const dataStream = request.get(countryLevelVaccineUrl);
         const parseStream = papa.parse(papa.NODE_STREAM_INPUT, options);
+        var dateRange = new Date();
+        
 
         dataStream.pipe(parseStream);
 
@@ -86,6 +88,12 @@ module.exports = function () {
 
         parseStream.on("finish", () => {
             context.CountryVaccines = data;
+
+            dateRange.setDate(dateRange.getDate() - 14);
+            var result = data.filter((x) => x.date > dateRange);
+            console.log(result);
+            context.CountryVaccines2Weeks = result;
+
             complete();
         });
 
@@ -173,7 +181,7 @@ module.exports = function () {
 
     router.get('/not-found', function (req, res) {
         var callbackCount = 0;
-        var context = {};
+        var context = {};S
         // var index = [req.params.id];
         // getCountryVaccinationData(res, context, complete, req.params.id);
         countyNotFoundMessage(res, context, complete, req.params.id);

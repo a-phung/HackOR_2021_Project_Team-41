@@ -52,14 +52,13 @@ function getCountyInfo() {
         dataType: 'json',
         success: function (result) {
             var info = result.filter((x) => x.subregion.toLowerCase() == countyName.toLowerCase() && x.region.toLowerCase() == stateName.toLowerCase());
-            console.log("Getting code")
-            console.log(info);
+               console.log(info);
             if(info.length == 0) {
                 window.location.href = "/local-info/not-found"
             }
             else {
-                countyCode = info[0].us_county_fips
-                window.location.href = "/local-info/county/" + info[0].us_county_fips;
+                countyCode = info[0].us_county_fips;
+                window.location.href = "/local-info/county/" + countyCode;
             }
         }
     });
