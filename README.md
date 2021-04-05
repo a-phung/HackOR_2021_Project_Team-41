@@ -7,3 +7,8 @@ We wanted to know how we could...
 - educate others on the science behind vaccines and health guidelines,
 - keep track of the different reopening and vaccine eligibility phases for different states and counties,
 - and help find appointments for more people to make steps towards herd immunity in the US.
+
+Link to devpost HackOR 2021 submission: https://devpost.com/software/covid-clarified
+Link to web application: https://hackor-group41.herokuapp.com/
+Link to 3d model: https://console.echoar.xyz/webar?key=sparkling-sun-8540&entry=5c9ca86f-969e-4aa7-95c0-9e699e97e07c
+Link to Figma web application: https://www.figma.com/proto/eSl6JL8O4iQFwOoP5S9jhN/HackOR-2021%3A-COVID-Clarified?node-id=35%3A206&viewport=65%2C341%2C0.24465657770633698&scaling=scale-down
